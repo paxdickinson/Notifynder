@@ -47,6 +47,18 @@ class NotifynderBuilder implements ArrayAccess
         $this->notifynderCategory = $notifynderCategory;
     }
 
+   /**
+     * Start with a fresh empty notification
+     *
+     * @return $this
+     */
+    public function begin() 
+    {
+        $this->notifications = [];
+
+        return $this;
+    }
+
     /**
      * Set who will send the notification
      *
